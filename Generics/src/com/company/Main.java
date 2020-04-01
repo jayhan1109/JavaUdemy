@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -26,6 +24,9 @@ public class Main {
 ////        failTeam.addPlayer("fail");
 
         chicago.matchResult(la,2,4);
+        chicago.matchResult(la,2,4);
+        chicago.matchResult(la,2,4);
+        la.matchResult(chicago,2,4);
 //        chicago.matchResult(mancity,2,1);
 
         System.out.println("Rankings");
@@ -35,5 +36,10 @@ public class Main {
         System.out.println(la.compareTo(chicago));
         System.out.println(chicago.compareTo(la));
         System.out.println(chicago.compareTo(chicago));
+
+        League<Team<BaseballPlayer>> baseBall = new League<>("MLB");
+        baseBall.addTeam(la);
+        baseBall.addTeam(chicago);
+        baseBall.print();
     }
 }
